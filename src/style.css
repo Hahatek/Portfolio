@@ -1,3 +1,10 @@
+:root {
+  --backgroundcolor: #1b1b1b;
+  --acentcolor: #e9204f;
+  --aHovercolor: #c81b44;
+  --fontcolor: #f3f3f3;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +16,8 @@ body {
 }
 
 header {
-  background: #333;
-  color: #fff;
+  background: var(--backgroundcolor);
+  color: var(--fontcolor);
   padding: 10px 0;
   text-align: center;
   display: flex;
@@ -33,7 +40,7 @@ nav {
       margin: 10px;
 
       &:hover {
-        background: #555;
+        background: var(--aHovercolor);
         cursor: pointer;
         transition: background 0.3s ease;
         border-radius: 5px;
