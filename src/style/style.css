@@ -30,15 +30,22 @@ header {
     background-color: var(--backgroundcolor);
     position: sticky;
     color: var(--fontcolor);
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     h2 {
-        padding: 5px 10px;
+        width: fit-content;
+        padding: 10px;
     }
 }
 
 nav {
+    padding: 10px;
     ul {
-        visibility: hidden;
-        display: flex;
+        display: none;
         list-style: none;
         li {
             padding: 8px 10px;
@@ -115,18 +122,11 @@ nav {
     --rotate-bar-three: -45deg;
 }
 
-#check-icon:checked + ul {
-    ul {
-        visibility: visible;
-        display: flex;
-        list-style: none;
-        li {
-            padding: 8px 10px;
-            &:hover {
-                background-color: var(--acentcolor);
-            }
-        }
-    }
+/* używamy kiedy nie ma gwaracnji że coś jest bezpośrednim sąsiadem.
+w tym przypadku mamy input > label > ul czyli pomiędzy tym jest label dlatego ~
+*/
+#check-icon:checked ~ ul {
+    display: visible;
 }
 
 /* Media query */
